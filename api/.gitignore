@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Environment (never commit real secrets) - .env.example stays tracked
+.env*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+src/public/uploads/*
+!src/public/uploads/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db

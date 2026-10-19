@@ -1,0 +1,53 @@
+{
+  "name": "stock-sense-api",
+  "version": "1.0.0",
+  "description": "Stock Sense inventory management API built with Express, Sequelize, and MySQL",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "format": "prettier --write \"src/**/*.js\" \"*.js\" README.md package.json",
+    "format:check": "prettier --check \"src/**/*.js\" \"*.js\" README.md package.json",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:start:prod": "pm2 start ecosystem.config.js --env production",
+    "pm2:stop": "pm2 stop stock-sense-api",
+    "pm2:logs": "pm2 logs stock-sense-api",
+    "db:migrate": "sequelize-cli db:migrate",
+    "db:migrate:undo": "sequelize-cli db:migrate:undo",
+    "db:seed": "sequelize-cli db:seed:all",
+    "db:reset": "sequelize-cli db:migrate:undo:all && npm run db:migrate && npm run db:seed"
+  },
+  "keywords": [
+    "inventory",
+    "stock-management",
+    "express",
+    "sequelize",
+    "mysql",
+    "jwt"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^2.30.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "ioredis": "^6.0.0",
+    "joi": "^18.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.12.1",
+    "multer": "^2.4.0",
+    "mysql2": "^3.24.6",
+    "sequelize": "^6.37.8",
+    "socket.io": "^4.8.4"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "nodemon": "^3.1.14",
+    "pm2": "^7.0.4",
+    "prettier": "^3.9.10",
+    "sequelize-cli": "^6.6.5"
+  }
+}
