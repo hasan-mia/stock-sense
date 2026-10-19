@@ -115,8 +115,7 @@ export function LoginForm() {
           >
             {mutation.isPending ? "Signing in…" : "Sign in"}
           </Button>
-          {process.env.NODE_ENV !== "production" && (
-            <div className="space-y-3 border-t pt-5">
+          <div className="space-y-3 border-t pt-5">
               <div className="flex items-center justify-between gap-3">
                 <p className="text-sm font-semibold">Try a demo account</p>
                 <span className="rounded-full bg-muted px-2 py-1 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
@@ -155,7 +154,6 @@ export function LoginForm() {
                 ))}
               </div>
             </div>
-          )}
         </form>
       </CardContent>
     </Card>
